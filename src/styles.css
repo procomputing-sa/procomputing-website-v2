@@ -1,0 +1,149 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent-teal: var(--accent-teal);
+  --color-primary-blue: var(--primary-blue);
+  --color-slate-surface: var(--slate-surface);
+  --font-display: "Instrument Serif", serif;
+  --font-sora: "Sora", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --radius-lg: 1rem;
+}
+
+:root {
+  --background: #f4f7fb;
+  --foreground: #0f172a;
+  --bg-dark: #f4f7fb;
+  --primary-blue: #0066ff;
+  --accent-teal: #00b8cc;
+  --slate-surface: #ffffff;
+  --primary: #0066ff;
+  --primary-foreground: #ffffff;
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html,
+  body {
+    background-color: var(--bg-dark);
+    color: var(--foreground);
+  }
+  body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: "Sora", sans-serif;
+    letter-spacing: -0.02em;
+  }
+  .font-display {
+    font-family: "Instrument Serif", serif;
+  }
+}
+
+@utility liquid-glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+@utility liquid-glass-soft {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+@utility liquid-glass-glow {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 184, 204, 0.6) 0%,
+      rgba(0, 102, 255, 0.35) 50%,
+      rgba(15, 23, 42, 0.1) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+@utility anti-grid-blob {
+  filter: blur(90px);
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  position: absolute;
+}
+
+@utility text-gradient-cyan {
+  background: linear-gradient(135deg, #00b8cc 0%, #0066ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+@utility animate-marquee-reverse {
+  animation: marquee-reverse 45s linear infinite;
+}
+@utility animate-marquee-slow {
+  animation: marquee 55s linear infinite;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@utility animate-float {
+  animation: float-y 8s ease-in-out infinite;
+}
