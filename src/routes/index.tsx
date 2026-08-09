@@ -601,7 +601,7 @@ function Home() {
       </section>
 
       {/* HOW CAN WE HELP */}
-      <section ref={servicesRef} className="relative px-6 py-32">
+      <section ref={servicesRef} className="relative px-6 py-32 overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-full -z-10 pointer-events-none">
           <div className="absolute left-1/2 top-20 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-[#0066FF]/10 blur-3xl" />
         </div>
@@ -675,8 +675,8 @@ function Home() {
             italic="for real workloads."
           />
         </div>
-        <div className="mt-14 md:overflow-visible">
-          <div className="products-track flex flex-col sm:flex-row gap-5 md:w-max md:pl-[max(1.5rem,calc((100vw-80rem)/2))] md:pr-[20vw] [will-change:transform]">
+        <div className="mt-14 overflow-hidden md:overflow-visible">
+          <div className="products-track flex flex-col sm:flex-row gap-5 md:w-max md:pl-[max(1.5rem,calc((100%-80rem)/2))] md:pr-[20vw] [will-change:transform]">
             {products.map((p) => (
               <div
                 key={p.name}
@@ -717,7 +717,7 @@ function Home() {
           />
         </div>
 
-        <div ref={marqueeRef} className="relative mt-20 max-w-7xl mx-auto px-2 sm:px-0">
+        <div ref={marqueeRef} className="relative mt-20 max-w-7xl mx-auto px-2 sm:px-0 overflow-hidden">
           {/* Side fade overlays */}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-16 md:w-28 z-10 bg-gradient-to-r from-[#F4F7FB] via-[#F4F7FB]/80 to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-16 md:w-28 z-10 bg-gradient-to-l from-[#F4F7FB] via-[#F4F7FB]/80 to-transparent" />

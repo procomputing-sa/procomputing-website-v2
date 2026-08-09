@@ -117,7 +117,7 @@ function Specials() {
 
   return (
     <div>
-      <section ref={heroRef} className="px-6 pt-10 pb-16 specials-hero">
+      <section ref={heroRef} className="px-6 pt-10 pb-16 specials-hero overflow-hidden">
         <div className="max-w-6xl mx-auto text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs text-cyan-300 liquid-glass">
@@ -139,7 +139,7 @@ function Specials() {
         </div>
       </section>
 
-      <section className="px-6 py-8">
+      <section className="px-6 py-8 overflow-hidden">
         <div className="wizard-panel max-w-3xl mx-auto liquid-glass liquid-glass-glow rounded-[2.5rem] p-8 relative overflow-hidden">
           {/* Progress */}
           <div className="flex items-center gap-2 mb-8">
@@ -305,7 +305,7 @@ function Specials() {
         </div>
       </section>
 
-      <section ref={offersRef} className="px-6 py-24">
+      <section ref={offersRef} className="px-6 py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             eyebrow="Most recent offers"

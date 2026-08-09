@@ -106,7 +106,7 @@ function Process() {
 
   return (
     <div>
-      <section ref={heroRef} className="px-6 pt-10 pb-16 text-center process-hero">
+      <section ref={heroRef} className="px-6 pt-10 pb-16 text-center process-hero overflow-hidden">
         <FadeIn>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs text-cyan-300 liquid-glass">
             What We Do
@@ -120,7 +120,7 @@ function Process() {
         </FadeIn>
       </section>
 
-      <section ref={ref} className="relative px-6 py-16">
+      <section ref={ref} className="relative px-6 py-16 overflow-hidden">
         <div className="max-w-6xl mx-auto relative">
           {/* Mobile: single-column serpentine rail */}
           <div className="md:hidden relative">

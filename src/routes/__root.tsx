@@ -159,7 +159,7 @@ function RootComponent() {
       <SmoothScroll />
       <AmbientBackground />
       <Navbar />
-      <main className="pt-24">
+      <main className="pt-24 overflow-x-hidden w-full relative">
         <Outlet />
       </main>
       <Footer />

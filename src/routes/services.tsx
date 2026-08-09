@@ -277,7 +277,7 @@ function Services() {
         </div>
       </section>
 
-      <section ref={gridRef} className="px-6 py-16">
+      <section ref={gridRef} className="px-6 py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 [perspective:1500px]">
           {services.map((s) => (
             <ImageCard
@@ -307,7 +307,7 @@ function Services() {
         </div>
       </section>
 
-      <section ref={partnersRef} className="px-6 py-24">
+      <section ref={partnersRef} className="px-6 py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="partners-header">
             <SectionHeader

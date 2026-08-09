@@ -129,7 +129,7 @@ function Contact() {
 
   return (
     <div>
-      <section ref={heroRef} className="px-6 pt-10 pb-16 text-center contact-hero">
+      <section ref={heroRef} className="px-6 pt-10 pb-16 text-center contact-hero overflow-hidden">
         <FadeIn>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs text-cyan-300 liquid-glass">
             Contact
@@ -145,7 +145,7 @@ function Contact() {
         </FadeIn>
       </section>
 
-      <section ref={bodyRef} className="px-6 py-16">
+      <section ref={bodyRef} className="px-6 py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6">
           {/* Form */}
           <FadeIn>

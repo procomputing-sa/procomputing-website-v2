@@ -14,7 +14,7 @@ export function Footer() {
   }, []);
 
   return (
-    <div className="px-4 sm:px-6 pb-6 mt-24">
+    <div className="px-4 sm:px-6 pb-6 mt-24 overflow-hidden">
       <footer className="relative max-w-7xl mx-auto rounded-[2.5rem] liquid-glass overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="anti-grid-blob w-[320px] h-[320px] rounded-full bg-[#7FB4FF] -top-16 -left-16 opacity-40" />
